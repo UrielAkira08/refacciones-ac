@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carta de presentación — RefaccionesAC Pro. Distribuidores especializados en refacciones para A/C automotriz de servicio pesado.">
+  <title>Carta de Presentación | RefaccionesAC Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Carta overrides ─────────────────────── */
+    body { background: #e8edf2; }
+
+    .carta-toolbar {
+      background: var(--primary);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .carta-toolbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .toolbar-brand { color: var(--white); font-size: 0.9rem; font-weight: 600; }
+    .toolbar-brand a { color: var(--gray-300); font-size: 0.8rem; margin-left: 1rem; text-decoration: underline; }
+    .toolbar-actions { display: flex; gap: 0.6rem; }
+
+    /* ── Carta page wrapper ─────────────────── */
+    .carta-wrapper {
+      padding: 2rem 1rem 4rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* ── Carta sheet ────────────────────────── */
+    .carta-sheet {
+      background: var(--white);
+      width: 100%;
+      max-width: 820px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    /* Header band */
+    .carta-header {
+      background: var(--primary);
+      padding: 2.5rem 3rem 2rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .carta-brand { display: flex; align-items: center; gap: 1rem; }
+    .carta-brand-icon {
+      width: 56px; height: 56px;
+      background: var(--accent);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .carta-brand-name {
+      color: var(--white);
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+    .carta-brand-tag {
+      color: #7dd3fc;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 0.2rem;
+    }
+    .carta-contact-header {
+      text-align: right;
+      color: var(--gray-300);
+      font-size: 0.8rem;
+      line-height: 1.8;
+    }
+    .carta-contact-header strong { color: var(--white); display: block; margin-bottom: 0.25rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.07em; }
+
+    /* Accent strip */
+    .carta-strip {
+      height: 5px;
+      background: linear-gradient(90deg, var(--accent) 0%, #40a9ff 50%, var(--accent) 100%);
+    }
+
+    /* Body */
+    .carta-body {
+      padding: 2.5rem 3rem;
+    }
+
+    /* Date / location */
+    .carta-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .carta-lugar {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+    }
+    .carta-fecha {
+      font-size: 0.9rem;
+      color: var(--gray-700);
+      font-weight: 600;
+    }
+
+    /* Recipient */
+    .carta-destinatario {
+      margin-bottom: 1.75rem;
+    }
+    .carta-destinatario .dest-empresa {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .carta-destinatario .dest-atencion {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      margin-top: 0.15rem;
+    }
+    .carta-destinatario .dest-ciudad {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+    }
+
+    /* Salutation */
+    .carta-saludo {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Body paragraphs */
+    .carta-texto p {
+      font-size: 0.93rem;
+      color: var(--gray-700);
+      line-height: 1.8;
+      margin-bottom: 1.1rem;
+      text-align: justify;
+    }
+
+    /* Highlight box */
+    .carta-highlight {
+      background: var(--accent-glow);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 1.5rem 0;
+    }
+    .carta-highlight p {
+      margin: 0 !important;
+      color: var(--primary) !important;
+      font-weight: 600;
+    }
+
+    /* Product list */
+    .carta-productos {
+      margin: 1.5rem 0;
+    }
+    .carta-productos h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-500);
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+    .prod-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem;
+    }
+    .prod-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      background: var(--gray-100);
+      border-radius: var(--radius);
+      font-size: 0.82rem;
+      color: var(--gray-700);
+      font-weight: 500;
+    }
+    .prod-item::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Diferenciadores */
+    .carta-difs {
+      margin: 1.5rem 0;
+    }
+    .carta-difs h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-500);
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+    .dif-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .dif-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.88rem;
+      color: var(--gray-700);
+      line-height: 1.5;
+    }
+    .dif-check {
+      width: 18px; height: 18px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .dif-check svg { color: white; }
+
+    /* Closing */
+    .carta-cierre {
+      margin-top: 2rem;
+    }
+    .carta-cierre p {
+      font-size: 0.93rem;
+      color: var(--gray-700);
+      line-height: 1.8;
+      margin-bottom: 1.1rem;
+      text-align: justify;
+    }
+    .carta-despedida {
+      font-size: 0.93rem;
+      color: var(--gray-700);
+      margin-bottom: 2.5rem;
+    }
+
+    /* Signature */
+    .carta-firma {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .firma-block {
+      min-width: 180px;
+    }
+    .firma-line {
+      width: 100%;
+      height: 1px;
+      background: var(--gray-300);
+      margin-bottom: 0.5rem;
+    }
+    .firma-nombre {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .firma-cargo {
+      font-size: 0.78rem;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .firma-empresa {
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Footer band */
+    .carta-footer {
+      background: var(--primary);
+      padding: 1rem 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .carta-footer-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gray-300);
+      font-size: 0.78rem;
+    }
+    .carta-footer-item svg { color: var(--accent); flex-shrink: 0; }
+
+    /* ── Print ──────────────────────────────── */
+    @media print {
+      body { background: white; }
+      .carta-toolbar, .no-print { display: none !important; }
+      .carta-wrapper { padding: 0; }
+      .carta-sheet { box-shadow: none; max-width: 100%; }
+      .carta-header { background: var(--primary) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .carta-footer { background: var(--primary) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .carta-strip { background: var(--accent) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .carta-body { padding: 1.5rem 2rem; }
+      @page { margin: 0; size: letter; }
+    }
+
+    /* ── Mobile adjustments ─────────────────── */
+    @media (max-width: 640px) {
+      .carta-header  { padding: 1.5rem; }
+      .carta-body    { padding: 1.5rem; }
+      .carta-footer  { padding: 1rem 1.5rem; }
+      .carta-contact-header { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Toolbar (no se imprime) -->
+  <div class="carta-toolbar no-print">
+    <div class="container">
+      <div class="toolbar-brand">
+        RefaccionesAC Pro &mdash; Carta de Presentación
+        <a href="index.html">← Volver al sitio</a>
+      </div>
+      <div class="toolbar-actions">
+        <button onclick="window.print()" class="btn btn-primary" style="padding:0.5rem 1.1rem; font-size:0.85rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Imprimir / PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carta -->
+  <div class="carta-wrapper">
+    <div class="carta-sheet" role="document" aria-label="Carta de presentación RefaccionesAC Pro">
+
+      <!-- ── Encabezado ── -->
+      <div class="carta-header">
+        <div class="carta-brand">
+          <div class="carta-brand-icon" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.07 4.93L17.66 6.34M6.34 17.66L4.93 19.07M4.93 4.93L6.34 6.34M17.66 17.66L19.07 19.07"/>
+              <path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+            </svg>
+          </div>
+          <div>
+            <div class="carta-brand-name">RefaccionesAC Pro</div>
+            <div class="carta-brand-tag">Refacciones A/C · Servicio Pesado</div>
+          </div>
+        </div>
+        <div class="carta-contact-header">
+          <strong>Datos de contacto</strong>
+          Tel: +52 (123) 456-7890<br>
+          ventas@refaccionesacpro.mx<br>
+          Ciudad de México, México<br>
+          www.refaccionesacpro.mx
+        </div>
+      </div>
+      <div class="carta-strip"></div>
+
+      <!-- ── Cuerpo ── -->
+      <div class="carta-body">
+
+        <!-- Fecha y lugar -->
+        <div class="carta-meta">
+          <span class="carta-lugar">Ciudad de México, México</span>
+          <span class="carta-fecha" id="fechaActual">Junio de 2025</span>
+        </div>
+
+        <!-- Destinatario (editable) -->
+        <div class="carta-destinatario">
+          <div class="dest-empresa">Empresa / Taller Destinatario</div>
+          <div class="dest-atencion">Atención: Gerente de Flota / Jefe de Taller</div>
+          <div class="dest-ciudad">Ciudad, Estado</div>
+        </div>
+
+        <!-- Saludo -->
+        <div class="carta-saludo">Estimado(a) cliente:</div>
+
+        <!-- Texto principal -->
+        <div class="carta-texto">
+          <p>
+            Por medio de la presente, nos permitimos presentarles a <strong>RefaccionesAC Pro</strong>,
+            empresa mexicana con más de 15 años de experiencia en la distribución y
+            comercialización de refacciones para sistemas de aire acondicionado automotriz de
+            <strong>servicio pesado</strong>. Nuestra especialización nos distingue en un mercado
+            donde la disponibilidad inmediata, la calidad certificada y el asesoramiento técnico
+            son factores críticos para mantener sus unidades en operación.
+          </p>
+          <p>
+            Comprendemos que para una empresa de transporte, construcción o mantenimiento de
+            maquinaria, cada hora de paro no programado representa pérdidas directas. Por ello,
+            hemos construido una operación enfocada exclusivamente en los sistemas de climatización
+            de vehículos de trabajo, con un inventario diseñado para responder con rapidez y
+            precisión a sus requerimientos más urgentes.
+          </p>
+        </div>
+
+        <!-- Destacado -->
+        <div class="carta-highlight">
+          <p>Contamos con más de 500 números de parte disponibles para entrega inmediata en la Ciudad de México, con envíos express a toda la República Mexicana.</p>
+        </div>
+
+        <!-- Productos -->
+        <div class="carta-productos">
+          <h4>Líneas de producto que ofrecemos</h4>
+          <div class="prod-grid">
+            <div class="prod-item">Compresores A/C</div>
+            <div class="prod-item">Condensadores</div>
+            <div class="prod-item">Evaporadores</div>
+            <div class="prod-item">Filtros Deshidratadores</div>
+            <div class="prod-item">Mangueras y Conexiones</div>
+            <div class="prod-item">Embragues y Poleas</div>
+            <div class="prod-item">Válvulas de Expansión</div>
+            <div class="prod-item">Motores y Ventiladores</div>
+          </div>
+        </div>
+
+        <div class="carta-texto">
+          <p>
+            Trabajamos con las marcas de mayor reconocimiento en el sector —incluyendo
+            <strong>Sanden, York, Thermo King, Carrier, Red Dot, Denso y Parker</strong>— tanto en
+            línea OEM (calidad original) como en alternativas aftermarket certificadas, lo que
+            nos permite ofrecer soluciones ajustadas a cualquier nivel de inversión sin sacrificar
+            la confiabilidad que sus operaciones exigen.
+          </p>
+          <p>
+            Cubrimos aplicaciones para las principales marcas de servicio pesado del mercado
+            mexicano: <strong>Freightliner, Kenworth, Peterbilt, International, Volvo, Scania,
+            Mercedes-Benz, Caterpillar, Komatsu</strong> y más.
+          </p>
+        </div>
+
+        <!-- Diferenciadores -->
+        <div class="carta-difs">
+          <h4>Nuestros compromisos con usted</h4>
+          <div class="dif-list">
+            <div class="dif-item">
+              <div class="dif-check" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span><strong>Asesoría técnica sin costo:</strong> identificamos la pieza correcta por número de parte, aplicación o diagnóstico de falla.</span>
+            </div>
+            <div class="dif-item">
+              <div class="dif-check" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span><strong>Entrega local en 24 horas</strong> y envíos express a todo el país con rastreo en tiempo real.</span>
+            </div>
+            <div class="dif-item">
+              <div class="dif-check" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span><strong>Garantía en todos los productos</strong> contra defectos de fabricación con respaldo post-venta real.</span>
+            </div>
+            <div class="dif-item">
+              <div class="dif-check" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span><strong>Crédito para talleres y flotas:</strong> líneas de crédito, precios de mayoreo por volumen y facturación electrónica (CFDI).</span>
+            </div>
+            <div class="dif-item">
+              <div class="dif-check" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span><strong>Atención directa y personalizada</strong> — sin intermediarios, sin call centers. Habla con un especialista desde el primer contacto.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cierre -->
+        <div class="carta-cierre">
+          <p>
+            Estamos convencidos de que una relación comercial sólida se construye sobre la
+            confianza y los resultados. Por ello, los invitamos a darnos la oportunidad de
+            demostrarles el nivel de servicio y la calidad de producto que RefaccionesAC Pro
+            puede ofrecer a su empresa o taller. Con gusto agendaremos una visita, una llamada
+            técnica o enviaremos nuestra lista de precios actualizada sin ningún compromiso.
+          </p>
+          <p>
+            Seguros de contar con su favorable respuesta, quedamos en espera de sus noticias.
+          </p>
+        </div>
+
+        <div class="carta-despedida">
+          Atentamente,
+        </div>
+
+        <!-- Firma -->
+        <div class="carta-firma">
+          <div class="firma-block">
+            <div class="firma-line"></div>
+            <div class="firma-nombre">Nombre del Representante</div>
+            <div class="firma-cargo">Director Comercial</div>
+            <div class="firma-empresa">RefaccionesAC Pro</div>
+          </div>
+          <div class="firma-block" style="min-width:160px;">
+            <div class="firma-line"></div>
+            <div class="firma-nombre">Sello / Firma Empresa</div>
+            <div class="firma-cargo"></div>
+          </div>
+        </div>
+
+      </div><!-- /carta-body -->
+
+      <!-- ── Pie de carta ── -->
+      <div class="carta-footer">
+        <div class="carta-footer-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92V19.92a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +52 (123) 456-7890
+        </div>
+        <div class="carta-footer-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          ventas@refaccionesacpro.mx
+        </div>
+        <div class="carta-footer-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 6.9 8 11.7z"/></svg>
+          Ciudad de México, México
+        </div>
+        <div class="carta-footer-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          www.refaccionesacpro.mx
+        </div>
+      </div>
+
+    </div><!-- /carta-sheet -->
+  </div><!-- /carta-wrapper -->
+
+  <script>
+    // Insert current date in Spanish
+    const months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+    const now = new Date();
+    document.getElementById('fechaActual').textContent =
+      now.getDate() + ' de ' + months[now.getMonth()] + ' de ' + now.getFullYear();
+  </script>
+</body>
+</html>

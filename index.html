@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RefaccionesAC Pro — Especialistas en refacciones para sistemas de aire acondicionado automotriz de servicio pesado. Compresores, condensadores, evaporadores y más.">
+  <title>RefaccionesAC Pro | Servicio Pesado Automotriz</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* page-specific overrides */
+    .hero-content { max-width: 600px; }
+    .section-features { background: var(--white); }
+    .fleet-section { background: var(--white); }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav-brand" aria-label="RefaccionesAC Pro inicio">
+          <div class="nav-logo-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.07 4.93L17.66 6.34M6.34 17.66L4.93 19.07M4.93 4.93L6.34 6.34M17.66 17.66L19.07 19.07"/>
+              <path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+            </svg>
+          </div>
+          <div class="nav-brand-text">
+            <span class="nav-brand-name">RefaccionesAC Pro</span>
+            <span class="nav-brand-tag">Servicio Pesado</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="#productos" class="active">Productos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#flota">Aplicaciones</a></li>
+          <li><a href="carta.html">Carta de Presentación</a></li>
+          <li><a href="#contacto" class="nav-cta btn">Cotizar</a></li>
+        </ul>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content fade-up">
+          <div class="hero-badge" aria-label="Categoría">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+            Especialistas en Servicio Pesado
+          </div>
+          <h1>
+            Refacciones AC para<br>
+            <span>Transporte y Maquinaria</span><br>
+            Pesada
+          </h1>
+          <p class="hero-desc">
+            Distribuidores especializados en sistemas de aire acondicionado automotriz para
+            camiones, autobuses, tractocamiones y maquinaria de construcción.
+            Calidad OEM y aftermarket con garantía.
+          </p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10H7M21 6H3M21 14H3M21 18H7"/></svg>
+              Ver Catálogo
+            </a>
+            <a href="#contacto" class="btn btn-outline">Solicitar Cotización</a>
+          </div>
+
+          <div class="hero-stats" style="margin-top:2.5rem;">
+            <div class="stat">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">SKUs en stock</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Años exp.</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">24h</span>
+              <span class="stat-label">Entrega local</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card-stack">
+            <div class="hcard hcard-back1"></div>
+            <div class="hcard hcard-back2"></div>
+            <div class="hcard hcard-main">
+              <div class="hcard-icon">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M19.07 4.93L17.66 6.34M6.34 17.66L4.93 19.07"/>
+                  <path d="M4.93 4.93L6.34 6.34M17.66 17.66L19.07 19.07"/>
+                  <path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+                </svg>
+              </div>
+              <span class="hcard-title">Compresor Sanden</span>
+              <span class="hcard-sub">508 / 510 / SD7H15</span>
+              <div style="margin-top:0.5rem; display:flex; gap:0.35rem; flex-wrap:wrap; justify-content:center;">
+                <span class="brand-tag">OEM</span>
+                <span class="brand-tag">Aftermarket</span>
+                <span class="brand-tag">Garantía</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ MARCAS / APLICACIONES ══════════ -->
+  <section class="brands-section fleet-section" id="flota">
+    <div class="container">
+      <p class="brands-label">Compatible con las principales marcas de servicio pesado</p>
+      <div class="brands-list" role="list">
+        <span class="brand-item" role="listitem">Freightliner</span>
+        <span class="brand-item" role="listitem">Kenworth</span>
+        <span class="brand-item" role="listitem">Peterbilt</span>
+        <span class="brand-item" role="listitem">International</span>
+        <span class="brand-item" role="listitem">Volvo</span>
+        <span class="brand-item" role="listitem">Mercedes-Benz</span>
+        <span class="brand-item" role="listitem">Scania</span>
+        <span class="brand-item" role="listitem">MAN</span>
+        <span class="brand-item" role="listitem">Caterpillar</span>
+        <span class="brand-item" role="listitem">Komatsu</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CATÁLOGO DE PRODUCTOS ══════════ -->
+  <section class="section section-gray" id="productos">
+    <div class="container">
+      <div class="section-header">
+        <h2>Catálogo de Refacciones</h2>
+        <div class="divider"></div>
+        <p>Amplio inventario de componentes para sistemas de A/C de servicio pesado con cobertura nacional.</p>
+      </div>
+
+      <div class="categories-grid">
+
+        <!-- Compresores -->
+        <article class="category-card">
+          <div class="cat-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.07 4.93L17.66 6.34M6.34 17.66L4.93 19.07M4.93 4.93L6.34 6.34M17.66 17.66L19.07 19.07"/>
+              <path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+            </svg>
+          </div>
+          <h3>Compresores</h3>
+          <p>Compresores de pistón rotativo, scroll y de paletas para aplicaciones de carga pesada. Nuevos y remanufacturados.</p>
+          <div class="cat-brands">
+            <span class="brand-tag">Sanden 508</span>
+            <span class="brand-tag">Sanden 510</span>
+            <span class="brand-tag">SD7H15</span>
+            <span class="brand-tag">York</span>
+            <span class="brand-tag">Thermo King</span>
+          </div>
+        </article>
+
+        <!-- Condensadores -->
+        <article class="category-card">
+          <div class="cat-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="18" rx="2"/>
+              <line x1="8" y1="3" x2="8" y2="21"/>
+              <line x1="14" y1="3" x2="14" y2="21"/>
+              <line x1="2" y1="9" x2="22" y2="9"/>
+              <line x1="2" y1="15" x2="22" y2="15"/>
+            </svg>
+          </div>
+          <h3>Condensadores</h3>
+          <p>Condensadores de aluminio y cobre-latón de alta capacidad BTU para ambientes de trabajo exigentes.</p>
+          <div class="cat-brands">
+            <span class="brand-tag">Peterbilt</span>
+            <span class="brand-tag">Kenworth</span>
+            <span class="brand-tag">Freightliner</span>
+            <span class="brand-tag">Universal</span>
+          </div>
+        </article>
+
+        <!-- Evaporadores -->
+        <article class="category-card">
+          <div class="cat-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v10M12 22v-5"/>
+              <path d="M4.93 4.93l3.54 3.54M15.54 15.54l3.53 3.53"/>
+              <path d="M2 12h5M17 12h5"/>
+              <path d="M4.93 19.07l3.54-3.53M15.54 8.46l3.53-3.53"/>
+            </svg>
+          </div>
+          <h3>Evaporadores</h3>
+          <p>Núcleos de evaporador y ensambles completos para cabinas de tractocamión y unidades de transporte refrigerado.</p>
+          <div class="cat-brands">
+            <span class="brand-tag">Carrier</span>
+            <span class="brand-tag">Thermo King</span>
+            <span class="brand-tag">Red Dot</span>
+            <span class="brand-tag">Universal</span>
+          </div>
+        </article>
+
+        <!-- Filtros Deshidratadores -->
+        <article class="category-card">
+          <div class="cat-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 3H2l8 9.46V19l4 2V12.46L22 3z"/>
+            </svg>
+          </div>
+          <h3>Filtros Deshidratadores</h3>
+          <p>Filtros secadores y acumuladores para proteger el sistema de humedad, ácidos y contaminantes.</p>
+          <div class="cat-brands">
+            <span class="brand-tag">Sanda</span>
+            <span class="brand-tag">Parker</span>
+            <span class="brand-tag">Multiline</span>
+            <span class="brand-tag">Universal</span>
+          </div>
+        </article>
+
+        <!-- Mangueras y Conexiones -->
+        <article class="category-card">
+          <div class="cat-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12h4l3-9 4 18 3-9h4"/>
+            </svg>
+          </div>
+          <h3>Mangueras y Conexiones</h3>
+          <p>Mangueras de alta y baja presión, adaptadores, válvulas Schrader y fitting de aluminio para R-134a y R-12.</p>
+          <div class="cat-brands">
+            <span class="brand-tag">Gates</span>
+            <span class="brand-tag">Parker</span>
+            <span class="brand-tag">Dayco</span>
+            <span class="brand-tag">Goodyear</span>
+          </div>
+        </article>
+
+        <!-- Embragues y Poleas -->
+        <article class="category-card">
+          <div class="cat-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="4"/>
+              <line x1="12" y1="2" x2="12" y2="8"/>
+              <line x1="12" y1="16" x2="12" y2="22"/>
+              <line x1="2" y1="12" x2="8" y2="12"/>
+              <line x1="16" y1="12" x2="22" y2="12"/>
+            </svg>
+          </div>
+          <h3>Embragues y Poleas</h3>
+          <p>Clutch magnético, poleas de compresor, placas y bobinas para todas las marcas principales de servicio pesado.</p>
+          <div class="cat-brands">
+            <span class="brand-tag">Sanden</span>
+            <span class="brand-tag">York</span>
+            <span class="brand-tag">Denso</span>
+            <span class="brand-tag">Valeo</span>
+          </div>
+        </article>
+
+        <!-- Válvulas de Expansión -->
+        <article class="category-card">
+          <div class="cat-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="1"/>
+              <path d="M12 5v6M12 13v6"/>
+              <path d="M5 5l7 7-7 7M19 5l-7 7 7 7"/>
+            </svg>
+          </div>
+          <h3>Válvulas de Expansión</h3>
+          <p>Válvulas TXV y orificio fijo para control de flujo de refrigerante en sistemas de alta demanda térmica.</p>
+          <div class="cat-brands">
+            <span class="brand-tag">Danfoss</span>
+            <span class="brand-tag">Parker</span>
+            <span class="brand-tag">Sporlan</span>
+            <span class="brand-tag">Emerson</span>
+          </div>
+        </article>
+
+        <!-- Ventiladores -->
+        <article class="category-card">
+          <div class="cat-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 12c0-3.31 2.69-6 6-6 0 3.31-2.69 6-6 6z"/>
+              <path d="M12 12c3.31 0 6 2.69 6 6-3.31 0-6-2.69-6-6z"/>
+              <path d="M12 12c0 3.31-2.69 6-6 6 0-3.31 2.69-6 6-6z"/>
+              <path d="M12 12c-3.31 0-6-2.69-6-6 3.31 0 6 2.69 6 6z"/>
+            </svg>
+          </div>
+          <h3>Motores y Ventiladores</h3>
+          <p>Motores de soplador, aspas de ventilador y conjuntos completos para condensador y evaporador de cabina.</p>
+          <div class="cat-brands">
+            <span class="brand-tag">Behr</span>
+            <span class="brand-tag">Modine</span>
+            <span class="brand-tag">Denso</span>
+            <span class="brand-tag">Red Dot</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ POR QUÉ ELEGIRNOS ══════════ -->
+  <section class="section section-dark" id="nosotros">
+    <div class="container">
+      <div class="section-header">
+        <h2>¿Por qué elegir RefaccionesAC Pro?</h2>
+        <div class="divider"></div>
+        <p>Más de una década abasteciendo flotas y talleres con las mejores refacciones del mercado.</p>
+      </div>
+
+      <div class="reasons-grid">
+        <div class="reason-card">
+          <div class="reason-num" aria-hidden="true">01</div>
+          <h3>Especialistas en Servicio Pesado</h3>
+          <p>No somos una refaccionaria generalista. Toda nuestra operación está enfocada en sistemas de A/C para vehículos de trabajo pesado: tractocamiones, autobuses, maquinaria de construcción y agrícola.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-num" aria-hidden="true">02</div>
+          <h3>Inventario Disponible</h3>
+          <p>Más de 500 números de parte en stock permanente. Minimizamos tiempos muertos de tu flota con entrega local en 24 horas y envíos express a todo el país.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-num" aria-hidden="true">03</div>
+          <h3>Calidad OEM y Aftermarket</h3>
+          <p>Ofrecemos piezas de calidad original (OEM) y aftermarket de marcas certificadas. Te asesoramos para que elijas la mejor relación costo-beneficio según la vida útil de tu unidad.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-num" aria-hidden="true">04</div>
+          <h3>Soporte Técnico</h3>
+          <p>Nuestro equipo técnico te ayuda a identificar la pieza correcta por número de parte, aplicación o síntoma de falla. Asesoría sin costo por WhatsApp o teléfono.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-num" aria-hidden="true">05</div>
+          <h3>Garantía en Todos los Productos</h3>
+          <p>Todas nuestras refacciones cuentan con garantía contra defectos de fabricación. Respaldamos cada venta con servicio post-venta real.</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-num" aria-hidden="true">06</div>
+          <h3>Crédito para Talleres y Flotas</h3>
+          <p>Programa de crédito especial para talleres mecánicos y empresas con flota vehicular. Facturación electrónica y precios de mayoreo según volumen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONTACTO ══════════ -->
+  <section class="section section-light" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contáctanos</h2>
+        <div class="divider"></div>
+        <p>Solicita cotización, verifica disponibilidad o habla con un asesor técnico.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Estamos para servirte</h3>
+          <p>Atendemos a talleres, flotas empresariales y mecánicos independientes en todo el país.</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92V19.92a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <strong>Teléfono</strong>
+                <span><a href="tel:+521234567890">+52 (123) 456-7890</a></span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <strong>Correo</strong>
+                <span><a href="mailto:ventas@refaccionesacpro.mx">ventas@refaccionesacpro.mx</a></span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <strong>Ubicación</strong>
+                <span>Ciudad de México, México<br><small style="color:var(--gray-500);font-size:0.8rem;">Envíos a toda la República</small></span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12,6 12,12 16,14"/>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <strong>Horario de Atención</strong>
+                <span>Lunes–Viernes 8:00–18:00<br>Sábado 8:00–14:00</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/521234567890?text=Hola%2C%20me%20interesa%20cotizar%20refacciones%20para%20A%2FC%20de%20servicio%20pesado."
+             class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Escribir por WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-form">
+          <h3>Solicitar Cotización</h3>
+          <form id="quoteForm" novalidate>
+            <div class="form-row two-col">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+              </div>
+              <div class="form-group">
+                <label for="empresa">Empresa / Taller</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nombre del negocio">
+              </div>
+            </div>
+            <div class="form-row two-col">
+              <div class="form-group">
+                <label for="tel">Teléfono</label>
+                <input type="tel" id="tel" name="tel" placeholder="+52 55 0000 0000" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="vehiculo">Vehículo / Aplicación</label>
+                <input type="text" id="vehiculo" name="vehiculo" placeholder="Ej: Kenworth T680 2020, Caterpillar 320D...">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pieza">Pieza o sistema requerido</label>
+                <select id="pieza" name="pieza">
+                  <option value="">— Seleccionar categoría —</option>
+                  <option>Compresor</option>
+                  <option>Condensador</option>
+                  <option>Evaporador</option>
+                  <option>Filtro deshidratador</option>
+                  <option>Mangueras y conexiones</option>
+                  <option>Embrague / Polea</option>
+                  <option>Válvula de expansión</option>
+                  <option>Motor / Ventilador</option>
+                  <option>Múltiples piezas / Kit</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="mensaje">Descripción del requerimiento</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Describe la pieza, número de parte (si lo tienes), síntoma de falla o cantidad requerida..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.85rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Enviar Solicitud
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <div class="nav-logo-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.07 4.93L17.66 6.34M6.34 17.66L4.93 19.07M4.93 4.93L6.34 6.34M17.66 17.66L19.07 19.07"/>
+                <path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+              </svg>
+            </div>
+            <div class="nav-brand-text">
+              <span class="nav-brand-name">RefaccionesAC Pro</span>
+              <span class="nav-brand-tag">Servicio Pesado</span>
+            </div>
+          </a>
+          <p>Especialistas en refacciones para sistemas de aire acondicionado automotriz de servicio pesado. Calidad y disponibilidad que tu operación necesita.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="#productos">Compresores</a></li>
+            <li><a href="#productos">Condensadores</a></li>
+            <li><a href="#productos">Evaporadores</a></li>
+            <li><a href="#productos">Filtros y Válvulas</a></li>
+            <li><a href="#productos">Mangueras</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#nosotros">Quiénes somos</a></li>
+            <li><a href="carta.html">Carta de Presentación</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#contacto">Programa de crédito</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto Rápido</h4>
+          <ul>
+            <li><a href="tel:+521234567890">+52 (123) 456-7890</a></li>
+            <li><a href="mailto:ventas@refaccionesacpro.mx">ventas@refaccionesacpro.mx</a></li>
+            <li><a href="https://wa.me/521234567890" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 RefaccionesAC Pro. Todos los derechos reservados.</p>
+        <p>Hecho en México &mdash; <a href="carta.html">Carta de Presentación</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav toggle (mobile)
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    // Close mobile nav on link click
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navAnchors.forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => observer.observe(s));
+
+    // Form submit (demo)
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.textContent = '¡Solicitud enviada!';
+      btn.disabled = true;
+      btn.style.background = '#38a169';
+      setTimeout(() => {
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar Solicitud';
+        btn.disabled = false;
+        btn.style.background = '';
+        this.reset();
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
